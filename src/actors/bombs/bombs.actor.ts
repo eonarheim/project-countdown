@@ -10,10 +10,9 @@ export class Bomb extends Actor {
         this.color = new Color(0, 0, 0);
         this.collisionType = CollisionType.Fixed;
     }
-    public update(engine, delta) {
-    }
 
     public onInitialize(engine) {
+        console.log("Start fuse");
         this.startFuse(engine);
     }
 

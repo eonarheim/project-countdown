@@ -13,6 +13,7 @@ export class Bomber extends Actor {
         this.color = new Color(255, 255, 255);
     }
     public update(engine, delta) {
+        super.update(engine, delta);
         //manage movement
         if (engine.input.keyboard.isHeld(Input.Keys.W) || engine.input.keyboard.isHeld(Input.Keys.Up)) {
             this.y -= 1;
@@ -30,7 +31,7 @@ export class Bomber extends Actor {
             engine.currentScene.add(bomb);
 
             //force actor initialization
-            bomb._initialize(engine);
+            //bomb._initialize(engine);
         };
     }
 
